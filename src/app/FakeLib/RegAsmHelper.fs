@@ -44,7 +44,7 @@ let RegAsm setParams lib =
 
 /// Executes `RegAsm.exe` with the `/codebase` `/tlb` option
 ///
-/// Used to temporarily register any .net dependencies before running 
+/// Used to temporarily register any .NET dependencies before running 
 /// a VB6 build
 let public RegisterAssembliesWithCodebase workingDir (assemblies:string seq) =
     use __ = traceStartTaskUsing "Regasm with codebase" "Registering assemblies with codebase, expect warnings"
@@ -67,7 +67,7 @@ let public RegisterAssembliesWithCodebase workingDir (assemblies:string seq) =
 
 /// Executes `Regasm.exe` with the `/codebase /tlb /unregister` options
 ///
-/// Used to unregegister any temporarily registerd .net dependencies
+/// Used to unregegister any temporarily registered .NET dependencies
 /// _after_ running a VB6 build
 let public UnregisterAssemblies workingDir (assemblies:string seq) =
     use __ = traceStartTaskUsing "Regasm /unregister with codebase" "Registering assemblies with codebase, expect warnings"
